@@ -28,24 +28,30 @@ Simply reference the JS file accordingly in your html.
 
 ###Properties
 
+```
 -responseData
 type: object
 description: The raw response object.
+```
 
+```
 -responseXml
 type: xml
 description: The response object's xml.
+```
 
+```
 -responseText
 type: text
 description: The response object's text.
+```
 
-responseJson
+```
+-responseJson
 type: json
 description: The response object's json.
-
-settings.:
-    
+```
+      
 ```
 -data
 type: object
@@ -153,7 +159,6 @@ application/xml. Additional settings are provided by the programmer.
 ```
 
 ```
-
 qsParameters.:
 -add function(id, value)
 type: method
