@@ -5,11 +5,13 @@ Javascript plug in that acts as a wrapper for making AJAX calls.
 ## Code Example
 
 ```js
-formDataHelper.module.settings.target = 'formDataUpload';
-formDataHelper.module.settings.action = '/IFrameTestHandler.ashx';
-formDataHelper.module.createFormData(parameters, files, false);
-formDataHelper.module.createIframe('formDataUpload', null);
-formDataHelper.module.submitFormData();
+        var sa = new serviceAdapter();
+        sa.settings.url = 'api/service';
+        sa.qsParameters.add('foo', 1);
+        sa.settings.contentType = 'application/json';
+        sa.callbacks.customSuccessCallback = function(e){ 
+        console.log('my custom callback');};
+        sa.get();
 ```
 
 ## Motivation
